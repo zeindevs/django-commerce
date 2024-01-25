@@ -1,3 +1,4 @@
+from django.contrib.auth import logout
 from django.shortcuts import redirect, render
 
 from core.forms import SignupForm
@@ -31,3 +32,8 @@ def signup(request):
     data = {"form": form}
 
     return render(request, "core/signup.html", data)
+
+
+def auth_logout(request):
+    logout(request)
+    return redirect("/login/")
