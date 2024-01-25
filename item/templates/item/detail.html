@@ -25,7 +25,7 @@
 				<div class="mt-5 p-5 bg-white rounded-md">
 					<p>This is your item!</p>
 
-					<a href="#" class="inline-block mt-4 px-5 py-2 text-lg font-semibold bg-teal-500 text-white rounded-md">Edit</a>
+					<a href="{% url 'item:edit' item.id %}" class="inline-block mt-4 px-5 py-2 text-lg font-semibold bg-teal-500 text-white rounded-md">Edit</a>
 					<a href="{% url 'item:delete' item.id %}" class="inline-block mt-4 px-5 py-2 text-lg font-semibold bg-red-500 text-white rounded-md">Delete</a>
 				</div>
 			{% else %}
