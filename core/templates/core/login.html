@@ -1,11 +1,11 @@
 {% extends 'core/base.html' %}
 {% block title %}
-	Sign up
+	Log in
 {%endblock%}
 
 {% block content %}
 	<div class="w-1/2 my-5 mx-auto p-5 bg-gray-100 rounded-md">
-		<h1 class="mb-5 text-3xl">Sign up</h1>
+		<h1 class="mb-5 text-3xl">Log in</h1>
 
 		<form method="post" action=".">
 			{% csrf_token %}
@@ -16,18 +16,8 @@
 			</div>
 
 			<div class="mb-3">
-					<label class="inline-block mb-3">Email</label>
-					{{ form.email }}
-			</div>
-
-			<div class="mb-3">
 					<label class="inline-block mb-3">Password</label>
-					{{ form.password1 }}
-			</div>
-
-				<div class="mb-3">
-					<label class="inline-block mb-3">Repeat Password</label>
-					{{ form.password2 }}
+					{{ form.password }}
 			</div>
 
 			{% if form.errors or form.non_field_errors %}
